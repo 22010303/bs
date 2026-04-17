@@ -1,0 +1,28 @@
+dataset:
+  repo_id: ur5e_pih_language # Repository ID
+  root: ./demo_data_staged # Your root for data file!
+policy:
+  type : smolvla
+  chunk_size: 5
+  n_action_steps: 5
+  device: cuda
+  
+save_checkpoint: true
+output_dir: ./ckpt/smolvla_pih1 # Save directory
+batch_size: 8
+job_name : smolvla_pih
+resume: false 
+seed : 43
+num_workers: 8
+steps: 20000
+eval_freq: -1 # No evaluation
+log_freq: 50
+save_checkpoint: true
+save_freq: 10000
+use_policy_training_preset: true
+  
+wandb:
+  enable: true
+  project: smolvla_pih7
+  entity: 903092212-
+  disable_artifact: true
